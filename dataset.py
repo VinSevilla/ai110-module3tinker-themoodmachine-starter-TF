@@ -50,6 +50,20 @@ SAMPLE_POSTS = [
     "This is fine",
     "So excited for the weekend",
     "I am not happy about this",
+    # Added posts — slang, emojis, sarcasm, mixed/ambiguous tone
+    "lowkey been crying all day but at least the pizza was good 😅",
+    "no cap this hits different 🔥",
+    "I absolutely love when my alarm goes off at 5am 😐",
+    "the party was okay i guess... felt kinda invisible tbh",
+    "bestie said she's proud of me and now i'm crying happy tears 😭💕",
+    "failed my exam but tbh im not even mad anymore 💀",
+    "today was meh. not bad, not good, just meh 🤷",
+    "highkey obsessed with this playlist rn 🎧❤️",
+    # Sarcasm and negation examples — added while testing scoring edge cases
+    "I absolutely love getting stuck in traffic",
+    "not bad, actually kind of fun",
+    "honestly don't know how I feel rn 😶",
+    "great, another Monday 🙄",
 ]
 
 # Human labels for each post above.
@@ -65,6 +79,20 @@ TRUE_LABELS = [
     "neutral",   # "This is fine"
     "positive",  # "So excited for the weekend"
     "negative",  # "I am not happy about this"
+    # Labels for added posts
+    "mixed",     # crying all day BUT pizza was good — genuinely split
+    "positive",  # "no cap this hits different" — enthusiastic slang
+    "negative",  # sarcasm: loving a 5am alarm is the opposite of what's said
+    "negative",  # felt invisible — subtle low mood despite neutral opener
+    "positive",  # happy tears from a compliment
+    "mixed",     # bad outcome (failed exam) + resigned acceptance ("not even mad")
+    "neutral",   # "meh" — explicitly neither positive nor negative
+    "positive",  # "highkey obsessed" — strong positive slang
+    # Sarcasm and negation labels
+    "negative",  # sarcasm — "love" is ironic; true meaning is frustration
+    "positive",  # negation flips "bad"; "fun" reinforces it
+    "neutral",   # genuine uncertainty — no clear positive or negative signal
+    "negative",  # sarcasm — "great" is ironic, eye-roll emoji confirms it
 ]
 
 # TODO: Add 5-10 more posts and labels.
